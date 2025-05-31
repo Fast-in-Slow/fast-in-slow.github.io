@@ -16,9 +16,9 @@
   
   <article class="post-content">
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="HybridVLA" />
+    <meta name="twitter:title" content="Fast-in-Slow" />
     <meta name="twitter:description"
-        content="HybridVLA: A Collaborative Diffusion and Autoregressive Vision-Language-Action Model for Generalizable Robotic Manipulation" />
+        content="Fast-in-Slow: A Dual-System Foundation Model Unifying Fast Manipulation within Slow Reasoning" />
     <meta name="twitter:url" content="https://fast-in-slow.github.io/" />
     <meta name="twitter:image" content="https://fast-in-slow.github.io/static/images/preview_new.jpeg" />
     <meta name="twitter:image" content="https://fast-in-slow.github.io/static/images/preview_new.jpeg" />
@@ -740,14 +740,15 @@
     <div class="container is-max-desktop">
         <div class="columns is-centered">
         <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">HybridVLA: <br> Collaborative Diffusion and Autoregression <br> in a Unified Vision-Language-Action Model</h1>
+            <h1 class="title is-1 publication-title">Fast-in-Slow: A Dual-System Foundation Model <br> Unifying Fast Manipulation within Slow Reasoning</h1>
             <div class="is-size-4 publication-authors">
             <span class="author-block">
-                <span class="author"><a href="https://liujiaming1996.github.io/">Jiaming Liu</a><sup>1,2</sup>, <a href="https://scholar.google.com.hk/citations?user=tT03tysAAAAJ&hl=zh-CN&oi=sra">Hao Chen</a><sup>3</sup>, Pengju An<sup>1,2</sup>, <a href="https://minifranka.github.io/">Zhuoyang Liu</a><sup>1</sup>,<a href="https://zrrskywalker.github.io/">Renrui Zhang</a><sup>3</sup>, <a href="https://gaystarc.github.io/">Chenyang Gu</a><sup>1,2</sup>, <a href="https://clorislili.github.io/clorisLi/">Xiaoqi Li</a><sup>1</sup>, <a href="https://ziyuguo99.github.io/">Ziyu Guo</a><sup>3</sup>,<br></span>
-                <span class="author"><a href="https://cscsx.github.io/">Sixiang Chen</a><sup>1,2</sup>, Mengzhen Liu<sup>1,2</sup>, Chengkai Hou<sup>1,2</sup>, Mengdi Zhao<sup>2</sup>, KC alex Zhou<sup>1</sup>, Pheng-Ann Heng<sup>3</sup>,<a href="https://www.shanghangzhang.com/">Shanghang Zhang</a><sup>1,2</sup> <sup>✉</sup></span>
+                <span class="author"></span><a href="https://scholar.google.com.hk/citations?user=tT03tysAAAAJ&hl=zh-CN&oi=sra">Hao Chen</a><sup>1, 2</sup> <sup>*</sup>, <a href="https://liujiaming1996.github.io/">Jiaming Liu</a><sup>2, 3</sup> <sup>*, ‡</sup>, <a href="https://gaystarc.github.io/">Chenyang Gu</a><sup>2</sup> <sup>†</sup>, Zhuoyang Liu</a><sup>2</sup> <sup>†</sup>,<a href="https://zrrskywalker.github.io/">Renrui Zhang</a><sup>1</sup> <sup>‡</sup>, <a href="https://clorislili.github.io/clorisLi/">Xiaoqi Li</a><sup>2</sup>,<br></span>
+                <span class="author">Xiao He</a><sup>3</sup>, Yandong Guo<sup>3</sup>, Chi-Wing Fu<sup>1</sup>, <a href="https://www.shanghangzhang.com/">Shanghang Zhang</a><sup>2, 4</sup> <sup>✉</sup>, Pheng-Ann Heng<sup>1</sup>,</span>
                 <span class="author"><br></span>
-                <span class="author"> <sup>1</sup>State Key Laboratory of Multimedia Information Processing, School of Computer Science, Peking University;<br></span>
-                <span class="author"> <sup>2</sup>Beijing Academy of Artificial Intelligence (BAAI); <sup>3</sup>CUHK<br></span>
+                <span class="author"> </span><sup>1</sup>The Chinese University of Hong Kong<br></span>
+                <span class="author"> <sup>2</sup>State Key Laboratory of Multimedia Information Processing, School of Computer Science, Peking University<br></span>
+                <span class="author">< sup>3</sup>AI<sup>2</sup>Robotics; <sup>4</sup>Beijing Academy of Artificial Intelligence (BAAI) 
             </span>
 
         <div class="linkscontainer">
@@ -937,7 +938,7 @@
     <div class="container is-max-desktop">
           <div class="columns is-centered has-text-centered">
             <div class="column">
-                <h2 class="title is-3">HybridVLA Framework</h2>
+                <h2 class="title is-3">FiS-VLA Framework</h2>
             </div>
           </div>
           <div class="columns is-centered has-text-centered">
@@ -949,46 +950,13 @@
             <div class="column">
                 <div class="content has-text-justified">
                     <p>
-                        FiS-VLA leverages an intact VLM for System 2 reasoning while repurposing the final transformer blocks of the LLM for System 1 execution module. System 2 handles low-frequency inputs such as 2D images and language instructions and produces intermediate latent features that serve as conditioning information for System 1. Instead of being conditioned solely on these periodically updated high-level representations, System 1 processes high-frequency inputs including 3D point clouds, 2D images, and robot states to produce stable and responsive actions. For joint optimization, we introduce a dual-aware co-training strategy that combines a diffusion denoising objective with an autoregressive objective which enables FiS-VLA to support fast action generation while retaining System 2’s multimodal reasoning capabilities.
+                        FiS-VLA leverages an intact VLM for System 2 reasoning while repurposing the final transformer blocks of the LLM for System 1 execution module. System 2 handles low-frequency inputs such as 2D images and language instructions and produces intermediate latent features that serve as conditioning information for System 1. Instead of being conditioned solely on these periodically updated high-level representations, System 1 processes high-frequency inputs including 3D point clouds, 2D images, and robot states to produce stable and responsive actions. For joint optimization, we introduce a dual-aware co-training strategy that combines a diffusion denoising objective with an autoregressive objective which enables FiS-VLA to support fast action generation while retaining System 2's multimodal reasoning capabilities.
                     </p>
                 </div>
             </div>
           </div>
     </div>
 </section>
-
-<!-- CSX -->
-<section class="section">
-    <div class="container is-max-desktop has-text-centered">
-        <h2 class="title is-3">Video Result Samples</h2>
-        <div class="field is-grouped is-grouped-multiline is-centered">
-            <div class="control" style="display: flex; align-items: center; justify-content: center;">
-                <label class="label" style="margin-right: 10px;">Robot</label>
-                <div class="select">
-                    <select id="robot-select">
-                        <option value="franka">Franka</option>
-                        <option value="agilex">Agilex</option>
-                    </select>
-                </div>
-            </div>
-            <div class="control" style="display: flex; align-items: center; justify-content: center;">
-                <label class="label" style="margin-right: 10px;">Task</label>
-                <div class="select">
-                    <select id="task-select" disabled>
-                        <!-- Options will be populated dynamically -->
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="video-container">
-            <video id="selected-video" controls width="100%">
-                <source id="video-source" src="" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-</section>
-<!-- CSX -->
 
 </body>
 
